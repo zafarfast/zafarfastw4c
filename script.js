@@ -54,7 +54,7 @@ var highScoreObject = {
      userScore: [0],
 }
 
-localStorage.setItem("quizUserScores",JSON.stringify(highScoreObject))
+localStorage.setItem("quizUserScores",JSON.stringify(highScoreObject));
 
 //-------------------Global variables----------------------------------//
 
@@ -72,6 +72,7 @@ var submitButton = document.getElementsByClassName('submitButton');
 var input = document.getElementsByClassName('userNameInput');
 var highScoreButton = document.getElementsByClassName('highscores');
 var returnButton = document.getElementsByClassName('returnButton');
+
 var endOfQuizVar = false;
 var correctAns = 0;
 var wrongAns = 0;
@@ -107,6 +108,13 @@ function sortHighScoreArrays()
     }
 }
 
+//-------------------clearLocalStorage(): Clear Local storage ----------------------------------//
+
+function clearLocalStorage()
+{
+    localStorage.setItem("quizUserScores", JSON.stringify({"userName":["guest"],"userScore":[0]})); //set default value of quizUserScores
+    highScores();
+}
 //-------------------highScores(): Displays user scores in a table ----------------------------------//
 
 function highScores()
@@ -251,7 +259,7 @@ function showUserName()
     document.getElementsByClassName('high-score-button')[0].classList.remove("hide");
     document.getElementsByClassName('submitButton')[0].textContent = "Return";
     submitButton[0].addEventListener("click", showHomeScreen);
-    document.getElementsByClassName('high-score-button')[0].addEventListener("click", highScores);
+    document.getElementsByClassName('high-score-button')[0].addEventListener("click", clearLocalStorage);
 }
 
 //-------------------storeScore(event): Stores user scores on local storage----------------------------------------------------------//
