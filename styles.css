@@ -1,0 +1,307 @@
+:root{
+    --themeColor: rgb(209, 243, 146); /* Main theme color */
+    --themeColorDark: rgba(165, 253, 33, 0.482); /* HighScores button hover color */
+    --buttonColor: rgb(213, 153, 64); /* Buttons color */
+    --buttonhover:rgb(244, 164, 4); /* Buttons hover color */
+}
+
+
+hr{
+    color: black;
+    height: 1px;
+    background-color: black;
+    width: 50%;
+}
+
+/* -----------------------------High Scores Table section ----------------------------------------------------------------------- */
+.tr0
+{
+    background-color: var(--themeColor);
+}
+
+table 
+{
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid black;
+    margin-top: 60px;
+}
+
+.tableHeading
+{
+    position: relative;
+    left: 38%;
+    right: 40%;
+    border: none;
+    font-weight: bolder;
+}
+
+tr 
+{
+    border: 3px solid black
+
+}
+
+td
+{
+    border-radius: 2px;
+
+    width: 100px;
+    text-align: center;
+    border: 1px solid black
+
+}
+
+/* ----------------------------- Option buttons list ----------------------------------------------------------------------- */
+
+li
+{
+    list-style: none;
+    position: relative;
+    right: 15px;
+}
+
+/* ----------------------------- Top section (Heading, HighScore button amd Timer)------------------------------------------ */
+
+
+.top-bar
+{
+    display: flex;
+    
+    justify-content: space-around;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.highscores, .timer
+{
+    background-color: var(--themeColor);
+    padding: 12px;
+    border-radius: 8px;
+    
+}
+
+.highscores:hover
+{
+    background-color: rgb(43, 84, 71);
+    color: white;
+    cursor:pointer;
+}
+
+
+/* ----------------------------- Main section (Questions, option buttons, return and submit buttons, hr etc)---------------- */
+
+.main-section
+{
+    width: 55%;
+    margin-top: 10%;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.start
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-top: 10px;
+    background-color: var(--buttonColor);
+    color: black;
+    font-weight: bolder;
+    border: none;
+    border-radius: 8px;
+
+}
+
+.right-or-wrong
+{
+    font-family: Arial, Helvetica, sans-serif;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+
+}
+.start:hover
+{
+    background-color: var(--buttonhover);
+}
+
+.button:hover, .returnButton:hover
+{
+    background-color: var(--buttonhover);
+
+}
+.button
+{
+    display: block;
+    text-align: left;
+    margin-top: 4px;
+    width:180px;
+    background-color: var(--buttonColor);
+    color: black;
+    border: none;
+    border-radius: 3px;
+}
+
+.buttons-section
+{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.paragraph
+{
+    width: 50%;
+    background-color: var(--themeColor);
+    padding: 20px;
+    border-radius: 15px;
+
+}
+
+.heading 
+{   font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.paragraph
+{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form p
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+.nameForm
+{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    background-color: var(--themeColorDark);
+    padding: 10px;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    border-radius: 10px;
+
+
+}
+
+.submitButton, .high-score-button
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-top: 10px;
+    background-color: var(--buttonColor);
+    color: black;
+    border: none;
+    border-radius: 8px;
+}
+
+.returnButton
+
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-top: 10px;
+    background-color: var(--buttonColor);
+    color: black;
+    border: none;
+    border-radius: 8px;
+    font-weight: bolder;
+
+}
+
+.userNameInputLocked
+{
+    background-color: gray;
+    color: rgb(205, 205, 205);
+}
+
+/* ----------------------------- Hide and Visible classes to hide and show elements------------------------------------------ */
+
+.hide
+{
+    display: none;
+}
+
+.visible
+{
+    display: block;
+}
+
+/* ----------------------------- Media Querry for screen size of 900px or less---------------------------------------------- */
+
+@media screen and (max-width: 900px)
+    {
+        .top-bar
+        {
+            display: block;
+            text-align: center;
+            width: 50%;
+            position: relative;
+            left: 25%;
+        }
+
+        .paragraph
+        {
+            width: 80%;
+            text-align: center;
+        }
+
+    }
+
+/* ----------------------------- Media Querry for screen size of 500px or less-------------------------------------------- */
+
+@media screen and (max-width: 500px)
+    {
+        .heading
+        {
+            font-size: x-large;
+            align-items: center;
+        }
+
+        .paragraph
+        {
+            width: 75%;
+            text-align: center;
+        }
+
+        .heading
+        {
+            font-size: large;}
+
+        .table
+        {
+            width: 60%;
+            font-size: small;
+        }
+
+
+    }

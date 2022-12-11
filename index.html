@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">   <!-- CSS file link-->
+    <title>Coding Quiz</title>
+</head>
+<body>
+    
+    <!-- Top section -->
+    <section class="top-bar">
+
+        <h5 class="highscores">High Scores</h5>
+        <h1 class ="heading">Coding Quiz Challenge</h1>
+        <h5 class="timer">Timer</h5>
+
+    </section>
+
+    <!-- Main section -->
+
+    <section class="main-section">
+
+        <p class = "paragraph">Try to answer the following code related questions within the time limit.
+            Keep in mind that incorrent answers will penalize your time by 10 seconds!.</p>
+        <button class="start"> Start</button>
+
+        <!-- Answer options buttons-->
+
+        <div class = "buttons-section" >
+            <ul class = "hide options">
+                <li><button class="button"  data-num="1"> Option 1</button></li>
+                <li><button class="button"  data-num="2"> Option 2</button></li>
+                <li><button class="button"  data-num="3"> Option 3</button></li>
+                <li><button class="button"  data-num="4"> Option 4</button></li>
+            </ol>
+        </div>
+        
+        <!-- Take user initials input-->
+
+        <div class="nameForm hide">
+            <p class="enterInitialsText">Enter your initials : </p>
+            <input type="text" class="userNameInput" value="Type your initials here">
+            <button class="submitButton">Submit</button>
+            <button class="high-score-button hide">High Scores</button>
+        </div>
+
+        <!-- horizontal line -->
+
+        <hr>
+
+        <!-- Display text if the answer is right or wrong -->
+
+        <p class="right-or-wrong"></p>
+
+    </section>
+
+    <!-- High Scores table section -->
+
+    <table class="table hide">
+        <tr>
+            <td class="tableHeading">Top 5 Scores &#127942</td>
+        </tr>
+        <tr class="tr0">
+            <td>#</td>
+            <td>Name</td>
+            <td>Score</td>
+        </tr>
+        <tr class="tr1">
+            <td data-0="0"></td>
+            <td data-1="1"></td>
+            <td data-2="2"></td>
+        </tr>
+        <tr class="tr2">
+            <td data-0="0"></td>
+            <td data-1="1"></td>
+            <td data-2="2"></td>
+        </tr>
+        <tr class="tr3">
+            <td data-0="0"></td>
+            <td data-1="1"></td>
+            <td data-2="2"></td>
+        </tr>
+        <tr class="tr4">
+            <td data-0="0"></td>
+            <td data-1="1"></td>
+            <td data-2="2"></td>
+        </tr>
+        <tr class="tr5">
+            <td data-0="0"></td>
+            <td data-1="1"></td>
+            <td data-2="2"></td>
+        </tr>
+        <button class="returnButton hide">Return</button>
+
+    </table>
+
+    <!-- Javascript file -->
+
+    <script src="script.js"></script>
+</body>
+</html>
