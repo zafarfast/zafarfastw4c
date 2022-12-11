@@ -163,7 +163,6 @@ function highScores()
 function displayQuestion(event)
 {   
     event.stopPropagation();
-    console.log("strtBtn[0].addEventListener(click)");
     document.getElementsByTagName('ul')[0].classList.add("visible");
     document.getElementsByTagName('ul')[0].classList.remove("hide");
     document.getElementsByClassName('start')[0].classList.add("hide");
@@ -188,7 +187,6 @@ function switchScreen()
 
 function removeHomeScreen()
 {
-    console.log("removeHomeScreen()");
     strtBtn[0].addEventListener("click", displayQuestion);
     highScoreButton[0].addEventListener("click", highScores)
     returnButton[0].addEventListener("click", switchScreen)
@@ -198,7 +196,6 @@ function removeHomeScreen()
 
 function showHomeScreen ()
 {
-    console.log("showHomeScreen ()");
 
     document.getElementsByClassName('paragraph')[0].textContent = paragraphText;
     document.getElementsByClassName('paragraph')[0].classList.remove('hide');
@@ -247,7 +244,6 @@ function checkIfInputisEmpty()
 function showUserName()
 {
     checkIfInputisEmpty();
-    console.log("showUserName()");
     document.getElementsByClassName('paragraph')[0].classList.add("hide");
     document.getElementsByClassName('paragraph')[0].classList.remove("visible");
     document.getElementsByClassName('enterInitialsText')[0].classList.add("hide");
@@ -268,7 +264,6 @@ function storeScore(event){
     highScoreObject.userName.push(input[0].value);
     highScoreObject.userScore.push(correctAns);
     localStorage.setItem("quizUserScores", JSON.stringify(highScoreObject));
-    console.log(event);
     showUserName();
     submitButton[0].removeEventListener("click", storeScore);
 }
@@ -284,7 +279,6 @@ function clearDefaultText()
 
 function takeUserName()
 {
-    console.log("takeUserName()");
 
     var endOfQuizText = "You have answered "+ correctAns+ " question(s) correctly out of " + totalQuestions;
     var submitButton = document.getElementsByClassName('submitButton');
@@ -312,18 +306,15 @@ function takeUserName()
 
 function timer(event)
 {       
-    console.log("timer(event)");
 
 
     var timerText = document.getElementsByClassName('timer');
 
     var repeat = setInterval(function(){
         timerText[0].textContent = "Timer: "+ j;
-        console.log(j);
         j = j-1;
 
         if (j <= 0 || endOfQuizVar == true){
-            console.log("Time is Up check")
             clearInterval(repeat);
             timerText[0].textContent = "Timer: 0"
             takeUserName();
@@ -340,7 +331,6 @@ function timer(event)
 
 function displayNextQuestion(i)
 {
-    console.log("displayNextQuestion(i)");
 
     document.getElementsByClassName('paragraph')[0].textContent = arrayofquestion[i];
     buttons[0].textContent = arrayofoption1[i];
@@ -355,19 +345,15 @@ function optionsButtonPress(event){
     event.stopPropagation();
 if (event.target.dataset.num == arrayofanswers[questionNumber])
 {
-    console.log(" - Inside pressed Right If condition");
 
     document.getElementsByClassName('right-or-wrong')[0].textContent="Right";
     correctAns = correctAns + 1;
     questionNumber = questionNumber + 1;
     if (questionNumber < totalQuestions){
-        console.log(" - - Inside questionNumber < totalQuestions (Right)");
 
-        console.log("Question number: " + questionNumber);
         displayNextQuestion(questionNumber);}
     else { 
 
-        console.log(" - - Inside questionNumber > totalQuestions, calling takeUserName() (Right)");
 
         questionNumber = 0;
         endOfQuizVar = true;
@@ -376,17 +362,13 @@ if (event.target.dataset.num == arrayofanswers[questionNumber])
 
 } else {             
     
-    console.log(" - Inside pressed Wrong If condition");
     document.getElementsByClassName('right-or-wrong')[0].textContent="Wrong";
     j = j - 10;
     questionNumber = questionNumber + 1;
     displayNextQuestion(questionNumber);
     if (questionNumber < totalQuestions){
-        console.log(" - - Inside questionNumber < totalQuestions (Wrong)");
-        console.log("Question number: " + questionNumber);
         displayNextQuestion(questionNumber);}
         else {
-        console.log(" - - Inside questionNumber > totalQuestions, calling takeUserName() (Wrong)");
 
         questionNumber = 0;
         endOfQuizVar = true;
@@ -401,7 +383,6 @@ if (event.target.dataset.num == arrayofanswers[questionNumber])
 
 function waitForButtonPress(questionNumber)
 {
-    console.log("waitForButtonPress(questionNumber)");
     options[0].addEventListener("click", optionsButtonPress);
 
 
