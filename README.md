@@ -1,12 +1,12 @@
-#Week 4 Assignment
+# Week 4 Assignment
 
-##Coding Quiz Application
+## Coding Quiz Application
 
-###Github URL
+### Github URL
 
-###Application URL
+### Application URL
 
-###Screenshots
+### Screenshots
 
 ![screenshot](.\assets\images\screenshot1.png)
 ![screenshot](.\assets\images\screenshot2.png)
