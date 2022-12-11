@@ -54,6 +54,8 @@ var highScoreObject = {
      userScore: [0],
 }
 
+localStorage.setItem("quizUserScores",JSON.stringify(highScoreObject))
+
 //-------------------Global variables----------------------------------//
 
 var arrayofquestion = [q1.question, q2.question, q3.question, q4.question, q5.question,];
@@ -70,7 +72,6 @@ var submitButton = document.getElementsByClassName('submitButton');
 var input = document.getElementsByClassName('userNameInput');
 var highScoreButton = document.getElementsByClassName('highscores');
 var returnButton = document.getElementsByClassName('returnButton');
-
 var endOfQuizVar = false;
 var correctAns = 0;
 var wrongAns = 0;
