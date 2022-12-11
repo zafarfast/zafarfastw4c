@@ -8,7 +8,7 @@
 
 ### Screenshots
 
-![screenshot](assets\images\screenshot1.png)
-![screenshot](assets\images\screenshot2.png)
-![screenshot](assets\images\screenshot3.png)
+![screenshot](assets/images/screenshot1.png)
+![screenshot](assets/images/screenshot2.png)
+![screenshot](assets/images/screenshot3.png)
 
