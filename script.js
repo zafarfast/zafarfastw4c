@@ -112,7 +112,7 @@ function sortHighScoreArrays()
 
 function clearLocalStorage()
 {
-    localStorage.setItem("quizUserScores", JSON.stringify({"userName":["guest"],"userScore":[0]})); //set default value of quizUserScores
+    localStorage.setItem("quizUserScores", JSON.stringify({"userName":[" "],"userScore":[" "]})); //set default value of quizUserScores
     highScores();
 }
 //-------------------highScores(): Displays user scores in a table ----------------------------------//
