@@ -50,8 +50,8 @@ var q5 = {
 //-------------------Object to store user scores and retrive scores from local storage----------------------------------//
 
 var highScoreObject = {
-     userName: ["guest"],
-     userScore: [0],
+     userName: [" "],
+     userScore: [" "],
 }
 
 localStorage.setItem("quizUserScores",JSON.stringify(highScoreObject));
